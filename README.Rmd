@@ -1,0 +1,40 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# ifastDummies
+
+This package improves the `fastDummies` package (you can check out their original package [here](https://github.com/jacobkap/fastDummies/)) by a tiny but -- to me -- significant feature. Using the `sep` argument, you can now directly specify how column names and unique values should be separated.
+
+## Installation
+
+You can install the development version of ifastDummies from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("Solaire-patch/ifastDummies")
+```
+
+## Example
+
+```{r}
+library(ifastDummies)
+
+df <- data.frame(city = c("SF", "SF", "NYC"),
+                 year = c(1990, 2000, 1990),
+                 crime = 1:3)
+
+
+i_dummy_cols(df, sep = "_-_")
+```

@@ -3,7 +3,7 @@
 
 # ifastDummies
 
-This package improves the `fastDummies` package (you can check out their
+This package improves the `dummy_cols` function from the `fastDummies` package (you can check out their
 original package [here](https://github.com/jacobkap/fastDummies/)) by a
 tiny but – to me – significant feature. Using the `sep` argument, you
 can now directly specify how column names and unique values should be
